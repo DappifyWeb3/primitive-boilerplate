@@ -1,0 +1,29 @@
+{
+  "name": "boilerplate-module",
+  "version": "1.0.0",
+  "description": "A barebones module using the grapesjs framework where developers can start their work",
+  "main": "dist/boilerplate-module",
+  "scripts": {
+    "start": "grapesjs-cli serve",
+    "build": "grapesjs-cli build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DappifyWeb3/boilerplate-module"
+  },
+  "keywords": [
+    "Dappify"
+  ],
+  "author": "Dappify Web3",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DappifyWeb3/boilerplate-module/issues"
+  },
+  "homepage": "https://github.com/DappifyWeb3/boilerplate-module#readme",
+  "dependencies": {
+    "grapesjs": "^0.19.5"
+  },
+  "devDependencies": {
+    "grapesjs-cli": "^2.0.0"
+  }
+}
