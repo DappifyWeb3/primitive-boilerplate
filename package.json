@@ -9,8 +9,10 @@
     "/": "./src/lib"
   },
   "scripts": {
-    "test": "jest",
-    "build": "parcel build"
+    "test": "jest --collectCoverage=true",
+    "coverage": "jest --coverage",
+    "build": "parcel build",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -23,7 +25,44 @@
   },
   "homepage": "https://github.com/DappifyWeb3/boilerplate-module#readme",
   "devDependencies": {
+    "husky": "^8.0.1",
     "jest": "^29.1.2",
     "parcel": "^2.7.0"
+  },
+  "jest": {
+    "moduleDirectories": [
+      "node_modules",
+      "src"
+    ],
+    "rootDir": "./",
+    "modulePaths": [
+      "<rootDir>"
+    ],
+    "coverageReporters": [
+      "json",
+      "text",
+      "html",
+      "lcov"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!src/**/*/*.d.ts",
+      "!src/**/*/Loadable.{js,jsx,ts,tsx}",
+      "!src/**/*/types.ts",
+      "!src/**/store.ts",
+      "!src/index.tsx",
+      "!src/serviceWorker.ts",
+      "!<rootDir>/node_modules/",
+      "!**/templates/**",
+      "!**/template/**"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 0,
+        "functions": 0,
+        "lines": 0,
+        "statements": 0
+      }
+    }
   }
 }
